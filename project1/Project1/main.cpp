@@ -44,7 +44,7 @@ int main()
         if (i == 2779433)cout << "碰撞前48bits：" << endl << temp << "\t2779433" << endl;
         if (i == 15087606)cout << temp << "\t15087606" << endl;
 
-        temp[12] = '\0';
+        temp[14] = '\0';
         char value[8] = { 0 };
         auto it = tempUmap.find(temp);
         if (it != tempUmap.end()) {
@@ -56,8 +56,8 @@ int main()
         i++;
     }
     end = clock();
-    cout << "运行时间" << (double)(end - start) / CLOCKS_PER_SEC << endl;
     cout << "size:" << tempUmap.size() << endl;
+    cout << "运行时间" << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
 
 }
