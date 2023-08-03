@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\k\no_app\innovation_lecture\all_project\innovation_project\project4\project3\sm3_self.h(3,9): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+C:\k\no_app\innovation_lecture\all_project\innovation_project\project4\project3\main.cpp(27,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  project3.vcxproj -> C:\k\no_app\innovation_lecture\all_project\innovation_project\project4\x64\Debug\project4.exe
