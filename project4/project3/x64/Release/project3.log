@@ -1,8 +1,8 @@
 ﻿  main.cpp
 C:\k\no_app\innovation_lecture\all_project\innovation_project\project4\project3\sm3_self.h(3,9): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
-C:\k\no_app\innovation_lecture\all_project\innovation_project\project4\project3\main.cpp(27,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\k\no_app\innovation_lecture\all_project\innovation_project\project4\project3\main.cpp(26,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   正在生成代码
-  3 of 12 functions (25.0%) were compiled, the rest were copied from previous compilation.
+  4 of 12 functions (33.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成

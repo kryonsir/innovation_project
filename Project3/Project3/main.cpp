@@ -48,7 +48,6 @@ uint32_t IV[8] = {
 };
 
 	uint8_t secret[] = "secret";
-    pr(secret);
     uint8_t msg[1024];
 
     // 对消息进行填充
@@ -66,13 +65,8 @@ uint32_t IV[8] = {
 
     memcpy(msg + new_len - 8, &reversed_bit_len, 8);
 
-    pr_msg(msg);
-
-
 	uint8_t result[32];
-    cout << "hello\n";
     sm3_hash(msg, 6, result,IV);
-    pr(result);
     uint8_t message[32] = "message";
     memcpy(msg + 64, message, 7);
     uint32_t ivv[8];
@@ -80,25 +74,18 @@ uint32_t IV[8] = {
     {
         ivv[i] = T(result, i);
     }
-    sm3_hash_ext(message, 7, result, ivv,1);
+    uint8_t result0[32] = "";
+    sm3_hash_ext(message, 7, result0, ivv,1);
     cout << "使用secret的hash值作为iv，计算message的hash值\n";
-    pr(result);
+    pr(result0);
     cout << "直接计算secret+padding+message的hash值\n";
     sm3_hash(msg, 71, result, IV);
     pr(result);
 
-
-    uint8_t iv[32] = "nihao,nihao,nizhendehao,nihao,,";
-    pr(iv);
-
-    for (size_t i = 0; i < 8; i++)
+    if (memcmp(result0, result, 32) == 0)
     {
-        printf("%x ", ivv[i]);
-
+        cout << "长度扩展攻击成功!"<<endl;
     }
-    printf("\n");
-
-
 
 
 
