@@ -19,5 +19,9 @@
 1. 在实现过程中尽量使用inline和宏定dd
 2. 进行100000次sm3_hash运算花费0.012s 对比openssl中分离出来的sm3计算100000次用时0.085s。总体实现效果还是不错的。
 
+## project5:根据RFC6962实现sm3的merkle tree
+1. computeMerkleRoot 函数接受一个消息列表作为输入，并根据 RFC6962 的规则计算 Merkle 树的根。sm3_hash 函数是一个占位函数，你需要在其中实现你自己的 SM3 哈希函数。
+2. 在 main 函数中，创建了一个测试数据集 messages，然后调用 computeMerkleRoot 函数计算 Merkle 树的根。最后，将 Merkle 根以十六进制形式打印出来。
+
 
 
